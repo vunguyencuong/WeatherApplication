@@ -2,7 +2,7 @@ package com.example.weatherapplication.Domain
 
 class FutureDomain(
     private var day : String,
-    private var picPath : String,
+    private var picPath : Int,
     private var status : String,
     private var highTemp : Int,
     private var lowTemp : Int
@@ -16,11 +16,11 @@ class FutureDomain(
         day = newDay
     }
 
-    fun getPicPath(): String {
+    fun getPicPath(): Int {
         return picPath
     }
 
-    fun setPicPath(newPicPath: String) {
+    fun setPicPath(newPicPath: Int) {
         picPath = newPicPath
     }
 
