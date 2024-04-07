@@ -1,6 +1,6 @@
 package com.example.weatherapplication.Server
 
-import com.example.weatherapplication.model.CurrentResponseApi
+import com.example.weatherapplication.model.CurrentResponsePojo
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -13,5 +13,5 @@ interface ApiService {
         @Query("lon") lon : Double,
         @Query("units") units : String,
         @Query("appid") ApiKey : String
-    ) : Call<CurrentResponseApi>
+    ) : Call<CurrentResponsePojo>
 }
