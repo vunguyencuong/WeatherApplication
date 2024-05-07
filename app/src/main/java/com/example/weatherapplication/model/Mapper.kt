@@ -12,10 +12,8 @@ fun CurrentResponsePojo.toCurrentResponse(): CurrentResponse {
         sunriseTime = sys.sunrise,
         sunsetTime = sys.sunset,
         icon = weather[0].icon,
-        percentRain = rain?.h,
+        percentCloud = clouds.all,
         windSpeed = wind.speed,
         humidity = main.humidity,
-        forecastWeathers = weather.drop(1).map {
-            CurrentResponse.ForecastWeather(it.description,it.icon,it.main)
-        })
+    )
 }
