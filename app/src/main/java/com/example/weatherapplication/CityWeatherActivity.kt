@@ -48,6 +48,7 @@ class CityWeatherActivity : AppCompatActivity() {
             handleLocationPermissionResult(permissions)
         }
         setupViews()
+        onBackPress()
     }
 
     private fun setupViews() {
@@ -145,6 +146,13 @@ class CityWeatherActivity : AppCompatActivity() {
         }
     }
 
+    private fun onBackPress() {
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
 
     @SuppressLint("MissingPermission")
     private fun fetchLocation() {
